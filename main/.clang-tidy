@@ -1,0 +1,105 @@
+---
+Checks:          "readability-*,modernize-*,clang-analyzer-*,bugprone-*,misc-*,performance-*,hicpp-multiway-paths-covered,cert-dcl21-cpp,cert-dcl50-cpp,cert-dcl58-cpp,cert-err34-c,cert-err52-cpp,cert-flp30-c,cert-mem57-cpp,cert-oop57-cpp,cert-oop58-cpp,llvm-namespace-comment,-clang-analyzer-osx.*,-google-readability-braces-around-statements,-google-readability-function-size,-google-readability-namespace-comments,-llvm-else-after-return,-llvm-qualified-auto,-bugprone-exception-escape,-cppcoreguidelines-pro-type-static-cast-downcast,-cppcoreguidelines-pro-type-union-access,-google-build-using-namespace,-google-runtime-references,-cppcoreguidelines-avoid-c-array,-cppcoreguidelines-avoid-magic-numbers,-cppcoreguidelines-c-copy-assignment-signature,-cppcoreguidelines-explicit-virtual-functions,-cppcoreguidelines-non-private-member-variables-in-classes,-misc-throw-by-value-catch-by-reference,-modernize-use-trailing-return-type,-modernize-use-nodiscard,-bugprone-easily-swappable-parameters,-misc-const-correctness,-modernize-macro-to-enum,-readabillity-use-anyofallof,-readability-identifier-length"
+HeaderFilterRegex: ''
+AnalyzeTemporaryDtors: false
+FormatStyle:     file
+User:            MBJ055
+CheckOptions:
+  - key:             readability-function-size.BranchThreshold
+    value:           '18'
+  - key:             readability-function-size.LineThreshold
+    value:           '180'
+  - key:             readability-function-size.NestingThreshold
+    value:           '4'
+  - key:             readability-function-size.ParameterThreshold
+    value:           '6'
+  - key:             readability-function-size.StatementThreshold
+    value:           '800'
+  - key:             readability-function-size.VariableThreshold
+    value:           '10'
+  - key:             readability-identifier-naming.AggressiveDependentMemberLookup
+    value:           'true'
+  - key:             readability-identifier-naming.NamespaceCase
+    value:           'lower_case'
+  - key:             readability-identifier-naming.ClassCase
+    value:           'CamelCase'
+  - key:             readability-identifier-naming.MemberCase
+    value:           'camelBack'
+  - key:             readability-identifier-naming.PrivateMemberCase
+    value:           'CamelCase'
+  - key:             readability-identifier-naming.PrivateMemberPrefix
+    value:           'm'
+  - key:             readability-identifier-naming.StructCase
+    value:           'CamelCase'
+  - key:             readability-identifier-naming.FunctionCase
+    value:           'CamelCase'
+  - key:             readability-identifier-naming.ParameterCase
+    value:           'camelBack'
+  - key:             readability-identifier-naming.VariableCase
+    value:           'camelBack'
+  - key:             readability-identifier-naming.StaticVariableCase
+    value:           'CamelCase'
+  - key:             readability-identifier-naming.StaticVariablePrefix
+    value:           's'
+  - key:             readability-identifier-naming.GlobalVariableCase
+    value:           'CamelCase'
+  - key:             readability-identifier-naming.GlobalVariablePrefix
+    value:           'g'
+  - key:             readability-identifier-naming.ClassConstantCase
+    value:           'CamelCase'
+  - key:             readability-identifier-naming.ClassConstantPrefix
+    value:           'm'
+  - key:             bugprone-argument-comment.CommentBoolLiterals
+    value:           'true'
+  - key:             bugprone-argument-comment.CommentCharacterLiterals
+    value:           'true'
+  - key:             bugprone-argument-comment.CommentFloatLiterals
+    value:           'true'
+  - key:             bugprone-argument-comment.CommentIntegerLiterals
+    value:           'true'
+  - key:             bugprone-argument-comment.CommentNullPtrs
+    value:           'true'
+  - key:             bugprone-argument-comment.CommentStringLiterals
+    value:           '0'
+  - key:             bugprone-argument-comment.CommentUserDefinedLiterals
+    value:           '0'
+  - key:             bugprone-argument-comment.StrictMode
+    value:           'true'
+  - key:             bugprone-argument-comment.IgnoreSingleArgument
+    value:           'true'
+  - key:             bugprone-sizeof-expression.WarnOnSizeOfIntegerExpression
+    value:           'true'
+  - key:             bugprone-suspicious-enum-usage.StrictMode
+    value:           'true'
+  - key:             cppcoreguidelines-macro-usage.CheckCapsOnly
+    value:           'true'
+  - key:             cppcoreguidelines-narrowing-conversions.PedanticMode
+    value:           'true'
+  - key:             misc-non-private-member-variables-in-classes.IgnoreClassesWithAllMemberVariablesBeingPublic
+    value:           'true'
+  - key:             cppcoreguidelines-pro-type-member-init.UseAssignment
+    value:           'true'
+  - key:             hicpp-multiway-paths-covered.WarnOnMissingElse
+    value:           'true'
+  - key:             misc-unused-parameters.StrictMode
+    value:           'true'
+  - key:             modernize-loop-convert.MaxCopySize
+    value:           '4'
+  - key:             modernize-loop-convert.MinConfidence
+    value:           reasonable
+  - key:             modernize-loop-convert.NamingStyle
+    value:           camelBack
+  - key:             modernize-use-emplace.ContainersWithPushBack
+    value:           '::std::vector;::std::list;::std::deque;::etl::vector;::etl::list;::etl::deque'
+  - key:             performance-inefficient-vector-operation.VectorLikeClasses
+    value:           '::std::vector,::etl::vector'
+  - key:             readability-braces-around-statements.ShortStatementLines
+    value:           '0'
+  - key:             readability-inconsistent-declaration-parameter-name.Strict
+    value:           'true'
+  - key:             readability-identifier-length.IgnoredParameterNames
+    value:           '^(rh|mDt|dt|id|t0|in)$'
+  - key:             readability-identifier-length.IgnoredVariableNames
+    value:           '^(rh|mDt|i|t|dt|it|cb|id|t0|in)$'
+
+...
